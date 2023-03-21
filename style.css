@@ -1,0 +1,106 @@
+body {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+  }
+  h1
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    lightseagreen 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+  h2 {
+    color: lightseagreen;
+  }
+  .grid-container {
+    columns: 4 100px;
+    column-gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+    div {
+      width: 150px;
+      margin: 0 1.5rem 1.5rem 0;
+      display: block;
+      width: 100%;
+      border: solid 2px black;
+      padding: 5px;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+    }
+      :hover img {
+        filter: grayscale(0);
+      }
+    
+    :hover {
+        border-color: lightseagreen;
+      }
+      img {
+        width: 100%;
+        filter: grayscale(100%);
+        border-radius: 5px;
+        transition: all .25s ease-in-out;
+      }
+      p {
+        margin: 5px 0;
+        padding: 0;
+        text-align: center;
+        font-style: italic;
+      }
+      h2 {
+        animation: 5s anim-popoutin ease infinite;
+      }
+      
+      @keyframes anim-popoutin {
+        0% {
+          color: black;
+          transform: scale(0);
+          opacity: 0;
+          text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+        25% {
+          color: red;
+          transform: scale(2);
+          opacity: 1;
+          text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+        50% {
+          color: black;
+          transform: scale(1);
+          opacity: 1;
+          text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+        }
+        100% {
+          /* animate nothing to add pause at the end of animation */
+          transform: scale(1);
+          opacity: 1;
+          text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+        }
+      }
+      
